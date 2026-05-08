@@ -4,8 +4,10 @@ public class PrimeNumberOrNot {
 
     static boolean checkPrime(int num){
 
-        for(int i = 2; i < num; i++){
-            if(num % i == 0){
+//        Ye code Faster hoga........yana Squaire Root on num tkk hi loop chal raha hai.......
+        for(int i = 2; i*i <= num; i++){
+            if (num % i == 0){
+                // Not a prime
                 return false;
             }
         }
@@ -13,6 +15,17 @@ public class PrimeNumberOrNot {
         // Aur loop se tabhi bahar nikloge, jb kabhi bhi remainder me zero n aaye
         // Aur agar kabhi ramainder me 0 nhi aaya iska mtlb It's a Prime Number
         return true;
+
+//        Ye Code Slow hoga......................
+//        for(int i = 2; i < num; i++){
+//            if(num % i == 0){
+//                return false;
+//            }
+//        }
+//        // Yaha tabhi pahuch paoge, jb loop se bahar nikloge.
+//        // Aur loop se tabhi bahar nikloge, jb kabhi bhi remainder me zero n aaye
+//        // Aur agar kabhi ramainder me 0 nhi aaya iska mtlb It's a Prime Number
+//        return true;
 
     }
 
